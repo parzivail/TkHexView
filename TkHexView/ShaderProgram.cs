@@ -1,6 +1,6 @@
 ﻿using OpenTK.Graphics.OpenGL;
 
-namespace RogueRender;
+namespace TkHexView;
 
 public class ShaderProgram
 {
@@ -14,8 +14,7 @@ public class ShaderProgram
 		GL.ShaderSource(shader, source);
 		GL.CompileShader(shader);
 
-		var compiled = -1;
-		GL.GetShaderi(shader, ShaderParameterName.CompileStatus, ref compiled);
+		GL.GetShaderi(shader, ShaderParameterName.CompileStatus, out var compiled);
 		if (compiled < 1)
 		{
 			GL.GetShaderInfoLog(shader, out var info);
@@ -29,8 +28,7 @@ public class ShaderProgram
 	{
 		GL.LinkProgram(Handle);
 
-		var compiled = -1;
-		GL.GetProgrami(Handle, ProgramProperty.LinkStatus, ref compiled);
+		GL.GetProgrami(Handle, ProgramProperty.LinkStatus, out var compiled);
 		if (compiled < 1)
 		{
 			GL.GetProgramInfoLog(Handle, out var info);

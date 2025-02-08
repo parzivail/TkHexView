@@ -1,9 +1,10 @@
 ﻿namespace TkHexView;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
-    {
-        Console.WriteLine("Hello, World!");
-    }
+	public static void Main(string[] args)
+	{
+		var console = new HexWindow();
+		console.Run();
+	}
 }

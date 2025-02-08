@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace RogueRender.Resources;
+namespace TkHexView.Resources;
 
 public static class ResourceHelper
 {

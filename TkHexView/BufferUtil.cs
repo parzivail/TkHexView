@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace RogueRender;
+namespace TkHexView;
 
 public class BufferUtil
 {

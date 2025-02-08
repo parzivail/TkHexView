@@ -1,6 +1,6 @@
 ﻿using OpenTK.Graphics.OpenGL;
 
-namespace RogueRender;
+namespace TkHexView;
 
 public class BufferAttributeAttribute(int pointerCount, VertexAttribPointerType pointerType, bool normalize = false, bool uploadAsInteger = false) : Attribute
 {

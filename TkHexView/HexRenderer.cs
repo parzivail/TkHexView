@@ -3,9 +3,9 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
-using RogueRender.Resources;
+using TkHexView.Resources;
 
-namespace RogueRender;
+namespace TkHexView;
 
 public class HexRenderer
 {
@@ -196,7 +196,7 @@ public class HexRenderer
 		}
 
 		var vertexSpan = (ReadOnlySpan<Cell>)_cells;
-		GL.BufferSubData(BufferTarget.ArrayBuffer, 0, vertexSpan[.._cellCursor]);
+		GLExtensions.BufferSubData(BufferTarget.ArrayBuffer, 0, vertexSpan[.._cellCursor]);
 	}
 
 	public void Render()
@@ -269,7 +269,7 @@ public class HexRenderer
 
 		GL.GenBuffer(out var vertexBuffer);
 		GL.BindBuffer(BufferTarget.ArrayBuffer, vertexBuffer);
-		GL.BufferData(BufferTarget.ArrayBuffer, _cells, BufferUsage.StreamDraw);
+		GLExtensions.BufferData(BufferTarget.ArrayBuffer, _cells, BufferUsage.StreamDraw);
 
 		Buffer.BindStructAttributes<Cell>();
 	}

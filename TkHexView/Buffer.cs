@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using OpenTK.Graphics.OpenGL;
 
-namespace RogueRender;
+namespace TkHexView;
 
 public class Buffer
 {

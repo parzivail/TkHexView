@@ -2,7 +2,7 @@
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 
-namespace RogueRender;
+namespace TkHexView;
 
 [Flags]
 public enum CellFlags : byte
